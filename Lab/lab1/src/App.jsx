@@ -2,6 +2,7 @@ import './App.css'
 import Footer from './components/footer'
 import Header from './components/header'
 import ListOfOrchid from './components/ListOfOrchid'
+import { listOfOrchids } from './listOfOrchid';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <h1>CHÀO MỪNG ĐẾN VỚI TIỆM HOA VUI VẺ</h1>
         </div>
 
-        <ListOfOrchid />
+        <ListOfOrchid orchids={listOfOrchids}/>
       </main>
 
       <Footer 
