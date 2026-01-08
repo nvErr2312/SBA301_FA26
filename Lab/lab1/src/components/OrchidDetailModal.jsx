@@ -16,7 +16,7 @@ function OrchidDetailModal({
       size="lg"
       dialogClassName="orchid-detail-modal"
     >
-      {/* Header có nút X */}
+      {/* Header có nút đóng */}
       <Modal.Header closeButton>
         <Modal.Title>Orchid Detail</Modal.Title>
       </Modal.Header>
