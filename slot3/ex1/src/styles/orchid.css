@@ -1,0 +1,56 @@
+.orchid-card {
+  max-width: 700px;              /* card rộng hơn chút cho thoáng */
+  margin: 30px auto;             /* căn giữa + cách trên dưới */
+  border-radius: 16px;           /* bo góc mềm */
+  overflow: hidden;
+  border: none;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.orchid-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ẢNH */
+.orchid-image {
+  width: 100%;
+  height: 280px;                 /* TĂNG chiều cao ảnh */
+  object-fit: cover;
+}
+
+/* TIÊU ĐỀ */
+.orchid-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 4px;
+}
+
+/* CATEGORY */
+.orchid-category {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* MÔ TẢ */
+.orchid-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* BADGE */
+.special-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e53935, #e35d5b);
+  color: white;
+  font-weight: 500;
+}
