@@ -7,7 +7,7 @@ function Header({ searchText, onSearchChange }) {
   return (
     <Navbar bg="light" expand="lg" className="border-bottom">
       <Container>
-        <Navbar.Brand className="fw-bold">My Website</Navbar.Brand>
+        <Navbar.Brand className="fw-bold">FlowerShop</Navbar.Brand>
 
         <Navbar.Toggle />
 
