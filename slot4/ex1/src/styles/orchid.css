@@ -1,0 +1,117 @@
+.orchid-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.orchid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Ảnh + wrapper */
+.image-wrapper {
+  position: relative;
+}
+
+.orchid-image {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Special góc phải trên */
+.special-badge-corner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff9f43, #ff6f00);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(255,111,0,0.4);
+}
+
+/* Title */
+.orchid-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Category */
+.orchid-category {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Mô tả giới hạn dòng để đều card */
+.orchid-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Giá */
+.orchid-price {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+/* Nút Detail ra giữa */
+.detail-btn {
+  align-self: center;
+  border-radius: 20px;
+  padding: 6px 22px;
+}
+
+
+/* ===== Orchid Detail Modal ===== */
+.orchid-detail-modal .modal-content {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Body */
+.orchid-detail-body {
+  padding: 24px;
+  text-align: center;
+}
+
+/* Image */
+.orchid-detail-body img {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Description */
+.orchid-detail-body p {
+  margin-top: 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Header */
+.orchid-detail-modal .modal-header {
+  border-bottom: none;
+  padding: 16px 20px;
+}
+
+/* Nút X */
+.orchid-detail-modal .btn-close {
+  transform: scale(1.1);
+}
