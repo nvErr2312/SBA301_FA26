@@ -44,7 +44,7 @@ function Orchid({ id, orchidName, category, isSpecial, image, price, description
         </Link>
       </Card.Body> */}
 
-        <Card.Body claasName="orchid-body">
+        <Card.Body className="orchid-body">
           <Card.Title className="orchid-title text-center"> 
             {orchidName}
           </Card.Title>

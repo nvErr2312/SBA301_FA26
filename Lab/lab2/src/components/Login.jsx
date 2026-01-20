@@ -1,49 +1,42 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap';
 import '../styles/login.css';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [usernameError, setUsernameError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+
+  const [errors, setErrors] = useState({
+    username: 'Username không được để trống',
+    password: 'Password không được để trống',
+  });
+
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const validateForm = () => {
-    let isValid = true;
-    
-    // Validate username
-    if (!username.trim()) {
-      setUsernameError('Username không được để trống');
-      isValid = false;
-    } else {
-      setUsernameError('');
+  const validateField = (name, value) => {
+    let message = '';
+
+    if (!value.trim()) {
+      message =
+        name === 'username'
+          ? 'Username không được để trống'
+          : 'Password không được để trống';
     }
-    
-    // Validate password
-    if (!password.trim()) {
-      setPasswordError('Password không được để trống');
-      isValid = false;
-    } else {
-      setPasswordError('');
-    }
-    
-    return isValid;
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: message,
+    }));
   };
 
   const handleLogin = (e) => {
     e.preventDefault();
     setError('');
-    setUsernameError('');
-    setPasswordError('');
 
-    // Validate form using useState
-    if (!validateForm()) {
-      return;
-    }
+    if (errors.username || errors.password) return;
 
-    // Check credentials
     if (username === 'admin' && password === '123456') {
       localStorage.setItem('lab2_isLoggedIn', 'true');
       localStorage.setItem('lab2_username', username);
@@ -52,24 +45,7 @@ function Login() {
     } else {
       setError('Sai username hoặc password');
       setPassword('');
-    }
-  };
-
-  const handleCancel = () => {
-    navigate('/');
-  };
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-    if (usernameError) {
-      setUsernameError('');
-    }
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-    if (passwordError) {
-      setPasswordError('');
+      validateField('password', '');
     }
   };
 
@@ -78,36 +54,58 @@ function Login() {
       <div className="login-box">
         <h1>Đăng Nhập</h1>
 
-        {error && <div className="error-message">{error}</div>}
+        {error && <div className="error-message text-danger">{error}</div>}
 
-        <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label>Username</label>
-            <input
+        <Form noValidate onSubmit={handleLogin}>
+          {/* Username */}
+          <Form.Group className="form-group">
+            <Form.Label>Username</Form.Label>
+            <Form.Control
               type="text"
-              placeholder="Vui lòng nhập tên đăng nhập "
               value={username}
-              onChange={handleUsernameChange}
+              placeholder="Vui lòng nhập tên đăng nhập"
+              isInvalid={!!errors.username}
+              onChange={(e) => {
+                setUsername(e.target.value);
+                validateField('username', e.target.value);
+              }}
             />
-            {usernameError && <div className="error-message">{usernameError}</div>}
-          </div>
+            <Form.Control.Feedback type="invalid">
+              {errors.username}
+            </Form.Control.Feedback>
+          </Form.Group>
 
-          <div className="form-group">
-            <label>Password</label>
-            <input
+          {/* Password */}
+          <Form.Group className="form-group">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
               type="password"
-              placeholder="Vui lòng nhập mật khẩu"
               value={password}
-              onChange={handlePasswordChange}
+              placeholder="Vui lòng nhập mật khẩu"
+              isInvalid={!!errors.password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                validateField('password', e.target.value);
+              }}
             />
-            {passwordError && <div className="error-message">{passwordError}</div>}
-          </div>
+            <Form.Control.Feedback type="invalid">
+              {errors.password}
+            </Form.Control.Feedback>
+          </Form.Group>
 
           <div className="form-buttons">
-            <button type="submit" className="btn-login">Login</button>
-            <button type="button" className="btn-cancel" onClick={handleCancel}>Cancel</button>
+            <Button type="submit" className="btn-login">
+              Login
+            </Button>
+            <Button
+              type="button"
+              className="btn-cancel"
+              onClick={() => navigate('/')}
+            >
+              Cancel
+            </Button>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   );
