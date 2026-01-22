@@ -1,0 +1,119 @@
+/* Orchid Detail Page */
+.orchid-detail-page {
+  padding: 40px 0;
+  min-height: 80vh;
+}
+
+/* Container */
+.detail-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr; /* CỘT ẢNH TO HƠN */
+  gap: 40px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.detail-image img {
+  width: 100%;          /* FULL chiều ngang */
+  height: 100%;         /* FULL chiều cao */
+  object-fit: cover;    /* Ảnh phủ kín khung */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.detail-image img:hover {
+  transform: scale(1.05); /* hover zoom nhẹ cho sang */
+}
+
+/* INFO */
+.detail-info h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detail-category {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.detail-price {
+  font-size: 1.6rem;
+  color: #e53935;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* DESCRIPTION */
+.detail-description {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.detail-description h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.detail-description p {
+  color: #555;
+  margin: 0;
+}
+
+/* Alert */
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+
+  .detail-image {
+    height: 350px;
+  }
+
+  .detail-info h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .detail-image {
+    height: 280px;
+  }
+
+  .detail-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .detail-price {
+    font-size: 1.3rem;
+  }
+}

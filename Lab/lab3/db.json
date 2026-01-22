@@ -1,0 +1,67 @@
+{
+  "orchids": [
+    {
+      "id": "1",
+      "orchidName": "Ceasar 4N",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta lobortis ex. Morbi cursus consectetur diam, non lobortis massa gravida eu...",
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "price": 150000,
+      "image": "images/hoalan1.jpg"
+    },
+    {
+      "id": "2",
+      "orchidName": "Mini Yaya",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta lobortis ex. Morbi cursus consectetur diam, non lobortis massa gravida eu...",
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "price": 180000,
+      "image": "images/hoalan2.jpg"
+    },
+    {
+      "id": "4",
+      "orchidName": "Damari",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta lobortis ex. Morbi cursus consectetur diam, non lobortis massa gravida eu...",
+      "category": "Dendrobium",
+      "isSpecial": false,
+      "price": 130000,
+      "image": "images/hoalan4.jpg"
+    },
+    {
+      "id": "5",
+      "orchidName": "Busuangense",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta lobortis ex. Morbi cursus consectetur diam, non lobortis massa gravida eu...",
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "price": 250000,
+      "image": "images/hoalan5.jpg"
+    },
+    {
+      "orchidName": "Pink Moth",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta lobortis ex. Morbi cursus consectetur diam, non lobortis massa gravida eu...",
+      "price": 50000,
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "image": "images/hoa-lan-rung-8.png.webp",
+      "id": "6"
+    },
+    {
+      "orchidName": "Hoa Pink Moth",
+      "description": "Hoa Pink Moth",
+      "price": 50000,
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "image": "images/hoalan6.jpg",
+      "id": "dfLnkVT"
+    },
+    {
+      "orchidName": "Hoa lan pro",
+      "description": "Hoa lan pro",
+      "price": 123000,
+      "category": "Dendrobium",
+      "isSpecial": true,
+      "image": "images/c2.jpg",
+      "id": "JVEOPbh"
+    }
+  ]
+}
