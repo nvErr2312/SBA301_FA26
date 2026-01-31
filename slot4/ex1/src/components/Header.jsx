@@ -18,7 +18,7 @@ function Header({ searchText, onSearchChange }) {
             <Nav.Link>Contact</Nav.Link>
           </Nav>
 
-          {/* SEARCH BAR */}
+          {/* Update form search  chuẩn react*/}
           <Form className="d-flex" style={{ width: 300 }}>
             <Form.Control
               type="search"

@@ -53,15 +53,6 @@
       "isSpecial": true,
       "image": "images/hoalan6.jpg",
       "id": "dfLnkVT"
-    },
-    {
-      "orchidName": "Hoa lan pro",
-      "description": "Hoa lan pro",
-      "price": 123000,
-      "category": "Dendrobium",
-      "isSpecial": true,
-      "image": "images/c2.jpg",
-      "id": "JVEOPbh"
     }
   ]
 }

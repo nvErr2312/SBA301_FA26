@@ -4,7 +4,7 @@ import Orchid from './Orchid.jsx';
 import FilterSort from './FilterSort.jsx';
 import { listOfOrchids } from '../listOfOrchid';
 
-function ListOfOrchid({searchText   }) {
+function ListOfOrchid({searchText }) {
   const [filterCategory,setFilterCategory] = React.useState("");
   const [sortOption,setSortOption] = React.useState("");
 
