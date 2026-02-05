@@ -1,0 +1,58 @@
+@startuml
+class nhiby.example.lab4New.Lab4NewApplicationTests {
+~ void contextLoads()
+}
+
+interface nhiby.example.lab4New.repositories.IOrchidRepository {
+}
+interface nhiby.example.lab4New.services.IOrchidService {
++ List<Orchid> getAllOrchids()
++ Orchid addOrchid(Orchid)
++ Orchid updateOrchid(int,Orchid)
++ boolean deleteOrchid(int)
++ Optional<Orchid> getOrchidByID(int)
+}
+
+class nhiby.example.lab4New.services.OrchidService {
+- IOrchidRepository orchidRepository
++ List<Orchid> getAllOrchids()
++ Orchid addOrchid(Orchid)
++ Orchid updateOrchid(int,Orchid)
++ boolean deleteOrchid(int)
++ Optional<Orchid> getOrchidByID(int)
+}
+
+
+class nhiby.example.lab4New.pojos.Orchid {
+- int orchidID
+- String orchidName
+- boolean isNatural
+- String orchidDescription
+- String orchidCategory
+- boolean isAttractive
+- String orchidUrl
++ void setIsNatural(boolean)
++ void setIsAttractive(boolean)
+}
+
+
+class nhiby.example.lab4New.Lab4NewApplication {
++ {static} void main(String[])
+}
+
+class nhiby.example.lab4New.controllers.OrchidController {
+- OrchidService orchidService
++ ResponseEntity<List<Orchid>> getAllOrchids()
++ ResponseEntity<Orchid> addOrchid(Orchid)
++ ResponseEntity<Orchid> updateOrchid(int,Orchid)
++ ResponseEntity<Void> deleteOrchid(int)
++ ResponseEntity<Orchid> getOrchidByID(int)
+}
+
+
+
+
+org.springframework.data.jpa.repository.JpaRepository <|-- nhiby.example.lab4New.repositories.IOrchidRepository
+nhiby.example.lab4New.services.IOrchidService <|.. nhiby.example.lab4New.services.OrchidService
+java.io.Serializable <|.. nhiby.example.lab4New.pojos.Orchid
+@enduml

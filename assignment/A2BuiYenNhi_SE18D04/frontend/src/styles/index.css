@@ -1,0 +1,116 @@
+/* ============================================
+   Design System – Màu chủ đạo xanh dương hiện đại
+   FU Management System
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Primary – Xanh dương hiện đại */
+  --md-primary: #2563eb;
+  --md-primary-hover: #1d4ed8;
+  --md-primary-light: #dbeafe;
+  --md-primary-dark: #1e40af;
+  --md-on-primary: #ffffff;
+
+  /* Surface & Background – tông xanh nhạt */
+  --md-surface: #ffffff;
+  --md-surface-variant: #eff6ff;
+  --md-background: #f0f9ff;
+  --md-surface-border: #bfdbfe;
+
+  /* Text */
+  --md-text-primary: #0f172a;
+  --md-text-secondary: #334155;
+  --md-text-hint: #64748b;
+  --md-text-on-primary: #ffffff;
+
+  /* State */
+  --md-error: #dc2626;
+  --md-error-bg: #fef2f2;
+  --md-success: #059669;
+  --md-success-bg: #ecfdf5;
+  --md-warning: #d97706;
+
+  /* Elevation & Radius */
+  --md-radius-sm: 6px;
+  --md-radius: 8px;
+  --md-radius-lg: 12px;
+  --md-radius-full: 9999px;
+  --md-elevation-1: 0 1px 3px 0 rgba(37, 99, 235, 0.08), 0 1px 2px -1px rgba(37, 99, 235, 0.06);
+  --md-elevation-2: 0 4px 6px -1px rgba(37, 99, 235, 0.08), 0 2px 4px -2px rgba(37, 99, 235, 0.06);
+  --md-elevation-3: 0 10px 15px -3px rgba(37, 99, 235, 0.1), 0 4px 6px -4px rgba(37, 99, 235, 0.08);
+
+  /* Typography */
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--md-text-primary);
+  background-color: var(--md-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--md-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--md-primary-hover);
+  text-decoration: underline;
+}
+
+/* Buttons – base */
+button {
+  border-radius: var(--md-radius);
+  border: 1px solid var(--md-surface-border);
+  padding: 0.5em 1em;
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 500;
+  background-color: var(--md-surface);
+  color: var(--md-text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background-color: var(--md-surface-variant);
+}
+button:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+/* Inputs – base */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.5em 0.75em;
+  border: 1px solid var(--md-surface-border);
+  border-radius: var(--md-radius-sm);
+  color: var(--md-text-primary);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--md-text-hint);
+}
