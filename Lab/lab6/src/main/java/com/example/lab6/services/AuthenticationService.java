@@ -1,0 +1,4 @@
+package com.example.lab6.services;
+
+public class AuthenticationService {
+}

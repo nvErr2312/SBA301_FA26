@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="582.0" prefWidth="900" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.StudentController">
+
+    <top>
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Quản Lý Sinh Viên" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="12" left="12" right="12" top="12" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+
+    <center>
+        <TableView fx:id="studentTable">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="80" text="ID" />
+                <TableColumn fx:id="emailColumn" prefWidth="220" text="Email" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="160" text="First Name" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="160" text="Last Name" />
+                <TableColumn fx:id="marksColumn" prefWidth="100" text="Marks" />
+            </columns>
+        </TableView>
+    </center>
+
+    <right>
+        <VBox prefWidth="300" spacing="10">
+            <padding>
+                <Insets bottom="12" left="12" right="12" top="12" />
+            </padding>
+
+            <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Thông tin sinh viên" />
+
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="35" />
+                    <ColumnConstraints percentWidth="65" />
+                </columnConstraints>
+
+                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtEmail" text="Luyt@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <PasswordField fx:id="txtPassword" text="123" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtFirstName" text="Luyt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <TextField fx:id="txtLastName" text="Phan" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Marks:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <TextField fx:id="txtMarks" text="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+
+            <Separator />
+
+            <HBox spacing="10">
+                <Button maxWidth="1.7976931348623157E308" onAction="#handleAddStudent" text="Add" HBox.hgrow="ALWAYS" />
+                <Button maxWidth="1.7976931348623157E308" onAction="#handleUpdateStudent" text="Update" HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <Button maxWidth="1.7976931348623157E308" onAction="#handleDeleteStudent" prefHeight="0.0" prefWidth="276.0" text="Delete" />
+        </VBox>
+    </right>
+
+</BorderPane>
+
+
